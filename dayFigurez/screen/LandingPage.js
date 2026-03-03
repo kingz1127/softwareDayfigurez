@@ -6,16 +6,28 @@ export default function LandingPage({navigation}){
     return(
         <View style={landingPage.landings}>
 
-            <Text>Welcome to </Text>
+            <Text style={{fontSize: 18}}>Welcome to </Text>
 
             <View style={landingPage.name}>
-                <Text style={{ color: "#fff", fontSize: 23}}>DayFigurez</Text>
+                <Text style={{ color: "#fff", fontSize: 27}}>DayFigurez</Text>
             </View>
 
-            
+            <View style={landingPage.homeNav}>
             <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-            <Text>Click here to register</Text>
+             <Text style={landingPage.clickHereText}>
+                        Click here to{' '}
+                        <Text style={landingPage.highlightedText}>register</Text>
+                    </Text>
             </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+             <Text style={landingPage.clickHereText}>
+                       {''} or{''}
+                        <Text style={landingPage.highlightedText}> login</Text>
+                    </Text>
+            </TouchableOpacity>
+            </View>
+
         </View>
     )
 }

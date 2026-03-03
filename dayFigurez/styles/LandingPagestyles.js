@@ -14,5 +14,14 @@ export const landingPage = StyleSheet.create({
         justifyContent: "center",
         borderRadius: 15,
        
+    },
+    clickHereText:{
+        fontSize:15
+    },
+   highlightedText:{
+        color: 'blue'
+    },
+    homeNav: {
+        flexDirection: 'row',
     }
 });

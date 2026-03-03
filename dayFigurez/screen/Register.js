@@ -1,12 +1,11 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TextInput,TouchableOpacity, View } from "react-native";
+import { registerStyle } from "../styles/RegisterStyles";
+import AdvancedForm from "@/components/AdvanceForm";
 
 export default function Register({navigation}){
     return(
-        <View>
-            <Text>Register</Text>
-            <Text>Already have an account </Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Login") }>
-               <Text> Login!</Text></TouchableOpacity>
+        <View style={registerStyle.regPage}>
+            <AdvancedForm navigation={navigation} />
         </View>
     )
 }
